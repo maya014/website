@@ -1,6 +1,6 @@
 
 body{   
-    background-color: wheat;
+    background-color: rgb(220, 217, 235);
     text-transform: capitalize;  
 }
 
@@ -26,7 +26,7 @@ body{
    background-repeat: no-repeat;
    background-size: auto;
    width: 100%;
-   height: 400px;
+   height: 500px;
    font-family: 'Bebas Neue', cursive;
    font-family: 'Righteous', cursive;   
 }
@@ -117,13 +117,16 @@ padding-top: 5%;
     justify-content: center;
     padding: 5%;
 }
-
+/* .d-main{
+    padding-top: 10%;
+} */
 
 .d-main .col{
     background-color: white;
-    width: 250px;
-    height: 400px;
+    width: 300px;
+    height: 450px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0, .9);
 }
 .d-main .price{
  font-size: 45px;
@@ -133,14 +136,16 @@ padding-top: 5%;
 }
 .col p{
 margin-bottom: 5%;
+
 }
 .button-col{
     border: 1px solid black;
     background-color: blue;
     border-radius: 20px;
-    margin-left: 20%;
+    margin-left: 24%;
     width: 150px;
     height: 20px;
+    
 }
 .button-col a{
     color: white;
@@ -148,13 +153,72 @@ margin-bottom: 5%;
 .button-col:hover{
     border: 1px solid black;
     border-radius: 20px;
-    margin-left: 20%;
+    margin-left: 24%;
     width: 150px;
     height: 20px;
     background-color: turquoise;
+}
+
+strong{
+    color: rgb(39, 8, 243);
 }
 /* დასასრული */
 .d-footer{
     text-align: center;
     padding: 5%;
 }
+
+/* ღილაკი */
+.togglebox{
+position: absolute;
+bottom: 5%;
+left: 50%;
+transform: translate(-10%, -10%); 
+} 
+
+input[type="checkbox"]{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background-color: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0,0, .2);
+    transition: .5s;
+}
+input:checked[type="checkbox"]{
+    background: #03a9f4;
+}
+input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0, .2);
+    transition: .5s;
+}
+input:checked[type="checkbox"]::before{
+    left: 40px;
+}
+.toggle-text{
+    font-size: 35px;  
+}
+.monthly{
+ padding-right: 1px;
+}
+.yearly{
+    padding-left: 35%;
+}
+
+
+@media screen and (max-width: 992px) {
+    .hide a {
+        display: none;
+    }
+  }
