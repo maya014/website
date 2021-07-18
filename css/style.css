@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 
 body{   
     background-color: rgb(220, 217, 235);
@@ -10,14 +17,20 @@ body{
 .d-header ul,
 .d-header .butten,
 .d-main .col-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-family: 'Bebas Neue', cursive;
 }
 .d-header,
 .col-flex {
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 /* დასაწყისი */
@@ -32,7 +45,9 @@ body{
 }
 .nav a{
     font-size:25px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .nav li{
     
@@ -113,8 +128,12 @@ padding-top: 5%;
     padding-top: 4%;
 }
 .d-main .toggle{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 5%;
 }
 /* .d-main{
@@ -126,7 +145,8 @@ padding-top: 5%;
     width: 300px;
     height: 450px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0, .9);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0, .9);
+            box-shadow: 0 2px 5px rgba(0,0,0, .9);
 }
 .d-main .price{
  font-size: 45px;
@@ -173,7 +193,9 @@ strong{
 position: absolute;
 bottom: 5%;
 left: 50%;
-transform: translate(-10%, -10%); 
+-webkit-transform: translate(-10%, -10%);
+    -ms-transform: translate(-10%, -10%);
+        transform: translate(-10%, -10%); 
 } 
 
 input[type="checkbox"]{
@@ -184,7 +206,10 @@ input[type="checkbox"]{
     background-color: #c6c6c6;
     outline: none;
     border-radius: 20px;
-    box-shadow: inset 0 0 5px rgba(0,0,0, .2);
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0, .2);
+            box-shadow: inset 0 0 5px rgba(0,0,0, .2);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 input:checked[type="checkbox"]{
@@ -199,8 +224,13 @@ input[type="checkbox"]::before{
     bottom: 0;
     left: 0;
     background: #fff;
-    transform: scale(1.1);
-    box-shadow: 0 2px 5px rgba(0,0,0, .2);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0, .2);
+            box-shadow: 0 2px 5px rgba(0,0,0, .2);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 input:checked[type="checkbox"]::before{
@@ -221,4 +251,17 @@ input:checked[type="checkbox"]::before{
     .hide a {
         display: none;
     }
-  }
+  }.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
